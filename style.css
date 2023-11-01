@@ -1,0 +1,204 @@
+:root {
+  --primary: rgb(98, 0, 255);
+  --bg: #ffff;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: black;
+  min-height: 2000px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #f1f1f1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgb(10, 10, 10);
+}
+
+.navbar .navbar-logo span {
+  color: rgb(98, 0, 255);
+}
+
+.navbar .navbar-nav a {
+  color: black;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: " ";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: black;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Styling untuk hero section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.profile {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero .profile img {
+  width: 300px;
+  border-radius: 1000%;
+  margin-left: 10rem;
+}
+
+.hero .content {
+  padding: 1.3rem 7%;
+  max-width: 50rem;
+}
+
+.hero .content h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  line-height: 1.8;
+}
+
+.hero .content p {
+  font-size: 1rem;
+}
+
+/* Styling Gallery */
+
+.gallery {
+  padding: 8rem 7% 1.4rem;
+}
+
+.gallery h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: var(--primary);
+}
+
+.gallery .row img {
+  width: 300px;
+}
+
+.gallery .img2 img {
+  display: flex;
+
+  width: 300px;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1080px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #f1f1f1;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: black;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .hero .content {
+    display: block;
+    /* flex-wrap: wrap; */
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  html {
+    font-size: 55%;
+  }
+}
