@@ -17,7 +17,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: black;
-  min-height: 2000px;
+  min-height: 3000px;
 }
 
 /* Navbar */
@@ -126,19 +126,59 @@ body {
 
 .gallery h2 {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
   color: var(--primary);
+}
+
+.gallery .row {
+  text-align: center;
 }
 
 .gallery .row img {
   width: 300px;
 }
 
-.gallery .img2 img {
-  display: flex;
+.gallery .img2 {
+  text-align: center;
+}
 
+.gallery .img2 img {
   width: 300px;
+  text-align: center;
+}
+
+.gallery .video {
+  padding-top: 0.5rem;
+  text-align: center;
+}
+
+.gallery .music {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.about {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2 {
+  /* text-align: center; */
+  /* font-size: 1.5rem; */
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.about h2 span {
+  color: var(--primary);
+}
+
+.about ul {
+  padding-top: -0.5rem;
+}
+
+.contact {
+  padding: 8.2rem 7% 1.4rem;
 }
 
 /* Media Queries */
