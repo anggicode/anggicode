@@ -17,7 +17,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: black;
-  min-height: 3000px;
+  min-height: 4000px;
 }
 
 /* Navbar */
@@ -178,7 +178,12 @@ body {
 }
 
 .contact {
-  padding: 8.2rem 7% 1.4rem;
+  padding: 15rem 7% 1.4rem;
+}
+
+.contact h2 {
+  font-weight: 400;
+  margin-top: 2rem;
 }
 
 /* Media Queries */
